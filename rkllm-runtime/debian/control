@@ -1,0 +1,33 @@
+Source: rkllm-runtime
+Section: libs
+Priority: optional
+Maintainer: Wang Haoyang <haoyangw@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Homepage: https://github.com/airockchip/rknn-llm
+Vcs-Browser: https://github.com/airockchip/rknn-llm
+Vcs-Git: https://github.com/airockchip/rknn-llm.git
+
+Package: librkllmrt-dev
+Section: libdevel
+Architecture: arm64
+Multi-Arch: same
+Depends:
+ librkllmrt (= ${binary:Version}),
+ ${misc:Depends},
+Description: RKLLM runtime development headers for LLMs on Rockchip SoCs
+ RKLLM runtime headers provides C/C++ programming interfaces
+ for developing LLM applications targeted at Rockchip SoCs.
+
+Package: librkllmrt
+Architecture: arm64
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: RKLLM runtime libraries for running LLMs on Rockchip SoCs
+ RKLLM runtime libraries provides C/C++ programming interfaces
+ for deploying LLMs and accelerating LLM applications on
+ Rockchip SoCs.

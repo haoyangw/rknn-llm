@@ -1,0 +1,6 @@
+rkllm-runtime (1.1.4) unstable; urgency=medium
+
+  * Initial release.
+  * Import rkllm-runtime v1.1.4 from upstream github.com/airockchip/rknn-llm
+
+ -- Wang Haoyang <haoyangw@gmail.com>  Sun, 09 Mar 2025 06:29:30 +0000
