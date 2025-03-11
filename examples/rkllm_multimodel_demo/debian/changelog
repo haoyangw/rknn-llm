@@ -1,0 +1,7 @@
+rkllm-multimodal (1.1.4-1) unstable; urgency=medium
+
+  * Initial release
+  * Import rkllm_multimodel_demo source code from upstream at
+  github.com/airockchip/rknn-llm
+
+ -- Wang Haoyang <haoyangw@gmail.com>  Sun, 09 Mar 2025 08:17:25 +0000

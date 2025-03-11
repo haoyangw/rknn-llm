@@ -1,0 +1,33 @@
+Source: rkllm-multimodal
+Section: utils
+Priority: optional
+Maintainer: Wang Haoyang <haoyangw@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ cmake (>= 3.10),
+ debhelper-compat (= 13),
+ libopencv-dev,
+ libopencv-calib3d-dev,
+ libopencv-core-dev,
+ libopencv-dnn-dev,
+ libopencv-features2d-dev,
+ libopencv-imgcodecs-dev,
+ libopencv-imgproc-dev,
+ libopencv-video-dev,
+ librkllmrt-dev (>= 1.1.4),
+ rknpu2-rk3588,
+Standards-Version: 4.6.2
+Homepage: https://github.com/airockchip/rknn-llm
+Vcs-Browser: https://github.com/airockchip/rknn-llm
+Vcs-Git: https://github.com/airockchip/rknn-llm.git
+
+Package: rkllm-multimodal
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ librkllmrt (>= 1.1.4),
+ rknpu2-rk3588,
+Description: Programs to run multimodal LLMs on Rockchip SoCs
+ A collection of simple programs to run multimodal LLMs using
+ the NPU of Rockchip SoCs.
