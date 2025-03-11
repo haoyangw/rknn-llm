@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+# Check if flask is installed
+if ! python3 -c "import flask" 2>/dev/null; then
+    echo "-------- Required dependency flask is not installed. Installing it now... --------"
+    pip3 install flask==2.2.2 Werkzeug==2.2.2 --break-system-packages
+fi
+
+exit 0

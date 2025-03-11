@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+# Check if Gradio is installed
+if ! python3 -c "import gradio" 2>/dev/null; then
+    echo "-------- Required dependency Gradio is not installed. Installing it now... --------"
+    pip3 install gradio>=4.24.0 --break-system-packages
+fi
+
+exit 0

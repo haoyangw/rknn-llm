@@ -1,0 +1,35 @@
+Source: rkllm-server
+Section: utils
+Priority: optional
+Maintainer: Wang Haoyang <haoyangw@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ cmake (>= 3.10),
+ debhelper-compat (= 13),
+ librkllmrt-dev (>= 1.1.4),
+Standards-Version: 4.6.2
+Homepage: https://github.com/airockchip/rknn-llm
+Vcs-Browser: https://github.com/airockchip/rknn-llm
+Vcs-Git: https://github.com/airockchip/rknn-llm.git
+
+Package: rkllm-server-flask
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ librkllmrt (>= 1.1.4),
+ python3-pip,
+Description: Server program to host a RKLLM-based LLM via flask
+ Launches a server that runs a RKLLM-based LLM to provide
+ access to the LLM via flask
+
+Package: rkllm-server-gradio
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ librkllmrt (>= 1.1.4),
+ python3-pip,
+Description: Server program to host a RKLLM-based LLM via gradio
+ Launches a server that runs a RKLLM-based LLM to provide
+ access to the LLM via gradio
