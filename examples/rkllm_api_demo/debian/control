@@ -1,0 +1,23 @@
+Source: rkllm-simple
+Section: utils
+Priority: optional
+Maintainer: Wang Haoyang <haoyangw@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ cmake (>= 3.10),
+ debhelper-compat (= 13),
+ librkllmrt-dev (>= 1.1.4),
+Standards-Version: 4.6.2
+Homepage: https://github.com/airockchip/rknn-llm
+Vcs-Browser: https://github.com/airockchip/rknn-llm
+Vcs-Git: https://github.com/airockchip/rknn-llm.git
+
+Package: rkllm-simple
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ librkllmrt (>= 1.1.4),
+Description: Programs to run text LLMs on Rockchip SoCs
+ A collection of simple programs to run mainly text
+ LLMs using the NPU of Rockchip SoCs.

@@ -1,0 +1,7 @@
+rkllm-simple for Debian
+---------------
+
+ CMake project adapted for an installation where rkllm_api
+ library and header is found under /usr
+
+ -- Wang Haoyang <haoyangw@gmail.com>  Sun, 09 Mar 2025 08:17:25 +0000
