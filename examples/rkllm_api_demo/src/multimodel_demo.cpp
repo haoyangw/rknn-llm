@@ -33,7 +33,7 @@ void exit_handler(int signal)
     if (llmHandle != nullptr)
     {
         {
-            cout << "程序即将退出" << endl;
+            cout << "Program is now terminating" << endl;
             LLMHandle _tmp = llmHandle;
             llmHandle = nullptr;
             rkllm_destroy(_tmp);
@@ -108,14 +108,22 @@ int main(int argc, char **argv)
         exit_handler(-1);
     }
 
-    vector<string> pre_input;
-    pre_input.push_back("<image>What is in the image?");
-    cout << "\n**********************可输入以下问题对应序号获取回答/或自定义输入********************\n"
+    cout << "\n************Input any prompts you like, or try these suggested prompts to get started************\n"
          << endl;
+
+    vector<string> pre_input;
+    pre_input.push_back("<image>What do you see in the image?");
+    pre_input.push_back("<image>What is in the background of the image?");
+    pre_input.push_back("<image>Summarise what is happening in the image.");
+
     for (int i = 0; i < (int)pre_input.size(); i++)
     {
-        cout << "[" << i << "] " << pre_input[i] << endl;
+        int count = i + 1;
+        cout << "[" << count << "] " << pre_input[i] << endl;
     }
+
+    cout << "\n*******NOTE: Include '<image>' in front of your prompt if asking about your provided image!*******\n"
+         << endl;
     cout << "\n*************************************************************************\n"
          << endl;
 

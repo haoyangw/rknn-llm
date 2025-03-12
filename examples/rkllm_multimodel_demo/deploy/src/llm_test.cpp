@@ -34,7 +34,7 @@ void exit_handler(int signal)
     if (llmHandle != nullptr)
     {
         {
-            cout << "程序即将退出" << endl;
+            cout << "Program is now terminating" << endl;
             LLMHandle _tmp = llmHandle;
             llmHandle = nullptr;
             rkllm_destroy(_tmp);
