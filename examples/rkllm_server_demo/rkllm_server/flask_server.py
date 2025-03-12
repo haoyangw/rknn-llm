@@ -17,7 +17,7 @@ PROMPT_TEXT_POSTFIX = "<|im_end|><|im_start|>assistant"
 # Set the dynamic library path
 arch = os.uname().machine
 rkllm_lib_path = f"/usr/lib/{arch}/librkllmrt.so"
-if not os.path.exists(primary_lib_path):
+if not os.path.exists(rkllm_lib_path):
     rkllm_lib_path = 'lib/librkllmrt.so'
 rkllm_lib = ctypes.CDLL(rkllm_lib_path)
 

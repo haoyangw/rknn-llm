@@ -18,7 +18,7 @@ os.environ["GRADIO_SERVER_PORT"] = "8080"
 # Set the dynamic library path
 arch = os.uname().machine
 rkllm_lib_path = f"/usr/lib/{arch}/librkllmrt.so"
-if not os.path.exists(primary_lib_path):
+if not os.path.exists(rkllm_lib_path):
     rkllm_lib_path = 'lib/librkllmrt.so'
 rkllm_lib = ctypes.CDLL(rkllm_lib_path)
 
