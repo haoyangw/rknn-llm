@@ -1,10 +1,17 @@
 #!/bin/bash
 set -e
 
+WRAPPER_SCRIPT=/usr/bin/rkllm-server-gradio
+
 # Check if Gradio is installed
 if ! python3 -c "import gradio" 2>/dev/null; then
     echo "-------- Required dependency Gradio is not installed. Installing it now... --------"
     pip3 install gradio>=4.24.0 --break-system-packages
 fi
+
+echo "-------- Installing wrapper for rkllm_server_gradio --------"
+echo "#!/bin/bash" > "$WRAPPER_SCRIPT"
+echo "python3 /usr/bin/rkllm_server_gradio.py" >> "$WRAPPER_SCRIPT"
+chmod a+x "$WRAPPER_SCRIPT"
 
 exit 0
